@@ -10,6 +10,9 @@ import Swinject
 
 extension DataAssembly {
     func assembleMappers(in container: Container) {
-        
+        container.register(BookMapper.self) { _ in
+            BookMapper()
+        }
+        .inObjectScope(.container)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class BookListViewController: UITableViewController {
     // MARK: - Outlets
@@ -15,11 +16,20 @@ class BookListViewController: UITableViewController {
     private var navigator: BookListNavigator!
     private var viewModel: BookListViewModel!
 
+    private var disposeBag = DisposeBag()
+    private var bookListWrapper: [BookViewDataWrapper] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = R.string.localized.bookListTitleController()
+        title = R.string.localized.bookListTitleController(0)
         setupUI()
+        bindViewModel()
+        loadViewModel()
     }
 }
 
@@ -31,19 +41,35 @@ private extension BookListViewController {
             forCellReuseIdentifier: R.reuseIdentifier.bookListTableViewCell.identifier
         )
     }
+    
+    func loadViewModel() {
+        viewModel.retrieveBook()
+    }
+    
+    func bindViewModel() {
+        viewModel
+            .bookResponse
+            .subscribe(onNext: { [weak self] bookResponseWrapper in
+                guard let self = self else { return }
+                self.title = bookResponseWrapper.title
+                self.bookListWrapper = bookResponseWrapper.bookList
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - TableView Delgate & DataSource
 extension BookListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Remove next branch
-        return 5
+        return bookListWrapper.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.bookListTableViewCell, for: indexPath) else {
             return UITableViewCell()
         }
+        
+        cell.setup(bookWrapper: bookListWrapper[indexPath.row])
         
         return cell
     }

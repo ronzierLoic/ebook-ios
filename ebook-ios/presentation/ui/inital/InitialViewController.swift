@@ -84,9 +84,9 @@ private extension InitialViewController {
         
         viewModel
             .navigateToBookList
-            .subscribe(onNext: { [weak self] _ in
+            .subscribe(onNext: { [weak self] searchBook in
                 guard let self = self else { return }
-                self.navigator.navigate(to: .bookList)
+                self.navigator.navigate(to: .bookList(searchBook: searchBook))
             })
             .disposed(by: disposeBag)
     }

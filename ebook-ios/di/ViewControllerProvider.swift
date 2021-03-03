@@ -31,8 +31,8 @@ extension ViewControllerProvider {
         return assembler.resolver.forceResolve(InitialViewController.self, arguments: self, router)
     }
     
-    func bookListViewController() -> Presentable {
+    func bookListViewController(searchBook: SearchBook) -> Presentable {
         let assembler = Assembler([BookListAssembly()], container: sharedContainer)
-        return assembler.resolver.forceResolve(BookListViewController.self)
+        return assembler.resolver.forceResolve(BookListViewController.self, argument: searchBook)
     }
 }

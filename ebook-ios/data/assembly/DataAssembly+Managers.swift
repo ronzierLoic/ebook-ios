@@ -14,5 +14,10 @@ extension DataAssembly {
             UserDefaultsManagerImpl()
         }
         .inObjectScope(.container)
+        
+        container.register(ApiManager.self) { _ in
+            ApiManagerImpl()
+        }
+        .inObjectScope(.container)
     }
 }

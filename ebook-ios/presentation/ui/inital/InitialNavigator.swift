@@ -10,7 +10,7 @@ import UIKit
 
 class InitialNavigator: Navigator {
     enum Destination {
-        case bookList
+        case bookList(searchBook: SearchBook)
     }
     
     private weak var viewControllerProvider: ViewControllerProvider?
@@ -35,8 +35,8 @@ private extension InitialNavigator {
         guard let viewControllerProvider = viewControllerProvider else { return UIViewController() }
         
         switch destination {
-        case .bookList:
-            return viewControllerProvider.bookListViewController()
+        case .bookList(let searchBook):
+            return viewControllerProvider.bookListViewController(searchBook: searchBook)
         }
     }
 }
