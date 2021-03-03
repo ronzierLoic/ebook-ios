@@ -1,0 +1,16 @@
+/* 
+  localized.strings
+  ebook-ios
+
+  Created by Loic RONZIER on 03/03/2021.
+  Copyright © 2021 Loic RONZIER. All rights reserved.
+*/
+
+// MARK: - InitalViewController
+
+"Initial.title.controller" = "Ebook";
+"Initial.title" = "Book Store";
+"Initial.book.title" = "Titre du livre";
+"Initial.book.author" = "Auteur du livre";
+"Initial.search.button" = "Recherche";
+"Initial.my.library.button" = "Ma bibliothèque";
