@@ -13,6 +13,13 @@
 		9F0F568325EFC9E800CEC934 /* localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F568525EFC9E800CEC934 /* localized.strings */; };
 		9F0F568825EFCAF300CEC934 /* InitialViewControllerValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F568725EFCAF300CEC934 /* InitialViewControllerValues.swift */; };
 		9F0F568B25EFCBA500CEC934 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F568A25EFCBA500CEC934 /* UIViewController+Extension.swift */; };
+		9F0F569125EFD5CD00CEC934 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569025EFD5CD00CEC934 /* BookRepository.swift */; };
+		9F0F569825EFD72400CEC934 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569625EFD72400CEC934 /* UserDefaultsManager.swift */; };
+		9F0F569925EFD72400CEC934 /* UserDefaultsManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569725EFD72400CEC934 /* UserDefaultsManagerImpl.swift */; };
+		9F0F569C25EFD78500CEC934 /* SearchBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569B25EFD78500CEC934 /* SearchBook.swift */; };
+		9F0F56AE25EFDF0E00CEC934 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56AD25EFDF0E00CEC934 /* RxCocoa */; };
+		9F0F56B025EFDF0E00CEC934 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56AF25EFDF0E00CEC934 /* RxSwift */; };
+		9F0F56B425EFDF8A00CEC934 /* ObserverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */; };
 		9FC3B0CF25066D640074D6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B0CE25066D640074D6ED /* AppDelegate.swift */; };
 		9FC3B0D825066D660074D6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D725066D660074D6ED /* Assets.xcassets */; };
 		9FC3B0DB25066D660074D6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D925066D660074D6ED /* LaunchScreen.storyboard */; };
@@ -42,6 +49,11 @@
 		9F0F568425EFC9E800CEC934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localized.strings; sourceTree = "<group>"; };
 		9F0F568725EFCAF300CEC934 /* InitialViewControllerValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerValues.swift; sourceTree = "<group>"; };
 		9F0F568A25EFCBA500CEC934 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9F0F569025EFD5CD00CEC934 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		9F0F569625EFD72400CEC934 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		9F0F569725EFD72400CEC934 /* UserDefaultsManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerImpl.swift; sourceTree = "<group>"; };
+		9F0F569B25EFD78500CEC934 /* SearchBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBook.swift; sourceTree = "<group>"; };
+		9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverType.swift; sourceTree = "<group>"; };
 		9FC3B0CB25066D640074D6ED /* ebook-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebook-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC3B0CE25066D640074D6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC3B0D725066D660074D6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0F56AE25EFDF0E00CEC934 /* RxCocoa in Frameworks */,
 				9F0F567525EFAED600CEC934 /* Swinject in Frameworks */,
+				9F0F56B025EFDF0E00CEC934 /* RxSwift in Frameworks */,
 				9F0F567925EFAF1A00CEC934 /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +97,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F0F568E25EFD5A600CEC934 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F569025EFD5CD00CEC934 /* BookRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		9F0F568F25EFD5AA00CEC934 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F569B25EFD78500CEC934 /* SearchBook.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9F0F569425EFD6D400CEC934 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F569525EFD70300CEC934 /* user-defaults */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		9F0F569525EFD70300CEC934 /* user-defaults */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F569625EFD72400CEC934 /* UserDefaultsManager.swift */,
+				9F0F569725EFD72400CEC934 /* UserDefaultsManagerImpl.swift */,
+			);
+			path = "user-defaults";
+			sourceTree = "<group>";
+		};
+		9F0F56B225EFDF8300CEC934 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		9FC3B0C225066D640074D6ED = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +253,11 @@
 		9FC3B11325067ECD0074D6ED /* data */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F56B225EFDF8300CEC934 /* extension */,
 				9FC3B11425067EE70074D6ED /* assembly */,
+				9F0F569425EFD6D400CEC934 /* manager */,
+				9F0F568F25EFD5AA00CEC934 /* model */,
+				9F0F568E25EFD5A600CEC934 /* repository */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -244,6 +303,8 @@
 			packageProductDependencies = (
 				9F0F567425EFAED600CEC934 /* Swinject */,
 				9F0F567825EFAF1A00CEC934 /* Rswift */,
+				9F0F56AD25EFDF0E00CEC934 /* RxCocoa */,
+				9F0F56AF25EFDF0E00CEC934 /* RxSwift */,
 			);
 			productName = "starter-kit-ios";
 			productReference = 9FC3B0CB25066D640074D6ED /* ebook-ios.app */;
@@ -276,6 +337,7 @@
 			packageReferences = (
 				9F0F567325EFAED600CEC934 /* XCRemoteSwiftPackageReference "Swinject" */,
 				9F0F567725EFAF1A00CEC934 /* XCRemoteSwiftPackageReference "R.swift" */,
+				9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 9FC3B0CC25066D640074D6ED /* Products */;
 			projectDirPath = "";
@@ -346,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0F569C25EFD78500CEC934 /* SearchBook.swift in Sources */,
 				9FC3B0FE250677830074D6ED /* Navigator.swift in Sources */,
 				9FC3B11025067E960074D6ED /* Resolver+Extension.swift in Sources */,
 				9FC3B0F9250675F70074D6ED /* Router.swift in Sources */,
@@ -354,16 +417,20 @@
 				9FC3B0FA250675F70074D6ED /* RouterImpl.swift in Sources */,
 				9FC3B0CF25066D640074D6ED /* AppDelegate.swift in Sources */,
 				9FC3B106250677B80074D6ED /* InitialAssembly.swift in Sources */,
+				9F0F56B425EFDF8A00CEC934 /* ObserverType.swift in Sources */,
 				9FC3B11225067EBF0074D6ED /* PresentationAssembly.swift in Sources */,
 				9FC3B11D250681480074D6ED /* AppNavigator.swift in Sources */,
 				9FC3B121250682520074D6ED /* DataAssembly+Managers.swift in Sources */,
+				9F0F569125EFD5CD00CEC934 /* BookRepository.swift in Sources */,
 				9FC3B107250677B80074D6ED /* InitialViewModel.swift in Sources */,
 				9F0F568825EFCAF300CEC934 /* InitialViewControllerValues.swift in Sources */,
+				9F0F569825EFD72400CEC934 /* UserDefaultsManager.swift in Sources */,
 				9FC3B0EA2506740C0074D6ED /* R.generated.swift in Sources */,
 				9F0F568B25EFCBA500CEC934 /* UIViewController+Extension.swift in Sources */,
 				9FC3B11625067EF00074D6ED /* DataAssembly.swift in Sources */,
 				9FC3B1232506825B0074D6ED /* DataAssembly+Mappers.swift in Sources */,
 				9FC3B11A250680E00074D6ED /* AppAssembly.swift in Sources */,
+				9F0F569925EFD72400CEC934 /* UserDefaultsManagerImpl.swift in Sources */,
 				9FC3B104250677B80074D6ED /* InitialNavigator.swift in Sources */,
 				9FC3B0FC250676310074D6ED /* Presentable.swift in Sources */,
 				9F0F567D25EFC32E00CEC934 /* UIView+Extension.swift in Sources */,
@@ -591,6 +658,14 @@
 				minimumVersion = 5.3.0;
 			};
 		};
+		9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -603,6 +678,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F0F567725EFAF1A00CEC934 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
+		};
+		9F0F56AD25EFDF0E00CEC934 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		9F0F56AF25EFDF0E00CEC934 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -14,8 +14,8 @@ class InitialAssembly: Assembly {
             InitialNavigator()
         }
         
-        container.register(InitialViewModel.self) { _ in
-            InitialViewModel()
+        container.register(InitialViewModel.self) { resolver in
+            InitialViewModel(bookRepository: resolver.forceResolve(BookRepository.self))
         }
         
         container.register(InitialViewController.self) { _ in
