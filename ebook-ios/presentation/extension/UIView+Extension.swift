@@ -16,6 +16,11 @@ extension UIView {
         self.layer.cornerRadius = radius
     }
     
+    /// Apply a circle render on the view
+    func applyCircleRender() {
+        self.layer.cornerRadius = self.frame.height / 2
+    }
+
     /// Add shake animation
     ///
     /// - Parameters:

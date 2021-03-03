@@ -14,6 +14,7 @@ class InitialViewModel {
     
     // MARK: Outputs
     var error: PublishSubject<Void> = PublishSubject()
+    var navigateToBookList: PublishSubject<Void> = PublishSubject()
     
     init(bookRepository: BookRepository) {
         self.bookRepository = bookRepository
@@ -29,6 +30,7 @@ class InitialViewModel {
         }
         
         bookRepository.saveLastSearchBook(with: SearchBook(title: title, author: author))
+        navigateToBookList.onNext()
     }
     
     func retrieveLastSearchBook() -> SearchBook? {

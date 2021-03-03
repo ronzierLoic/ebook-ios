@@ -20,6 +20,14 @@
 		9F0F56AE25EFDF0E00CEC934 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56AD25EFDF0E00CEC934 /* RxCocoa */; };
 		9F0F56B025EFDF0E00CEC934 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56AF25EFDF0E00CEC934 /* RxSwift */; };
 		9F0F56B425EFDF8A00CEC934 /* ObserverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */; };
+		9F0F56BC25F001CC00CEC934 /* BookListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B825F001CC00CEC934 /* BookListNavigator.swift */; };
+		9F0F56BD25F001CC00CEC934 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B925F001CC00CEC934 /* BookListViewController.swift */; };
+		9F0F56BE25F001CC00CEC934 /* BookListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56BA25F001CC00CEC934 /* BookListAssembly.swift */; };
+		9F0F56BF25F001CC00CEC934 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56BB25F001CC00CEC934 /* BookListViewModel.swift */; };
+		9F0F56C225F001D400CEC934 /* BookList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F56C125F001D400CEC934 /* BookList.storyboard */; };
+		9F0F56C725F0055800CEC934 /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56C525F0055800CEC934 /* BookListTableViewCell.swift */; };
+		9F0F56C825F0055800CEC934 /* BookListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F56C625F0055800CEC934 /* BookListTableViewCell.xib */; };
+		9F0F56CD25F00ED900CEC934 /* BookListTableViewCellValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56CC25F00ED900CEC934 /* BookListTableViewCellValues.swift */; };
 		9FC3B0CF25066D640074D6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B0CE25066D640074D6ED /* AppDelegate.swift */; };
 		9FC3B0D825066D660074D6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D725066D660074D6ED /* Assets.xcassets */; };
 		9FC3B0DB25066D660074D6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D925066D660074D6ED /* LaunchScreen.storyboard */; };
@@ -54,6 +62,14 @@
 		9F0F569725EFD72400CEC934 /* UserDefaultsManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerImpl.swift; sourceTree = "<group>"; };
 		9F0F569B25EFD78500CEC934 /* SearchBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBook.swift; sourceTree = "<group>"; };
 		9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverType.swift; sourceTree = "<group>"; };
+		9F0F56B825F001CC00CEC934 /* BookListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListNavigator.swift; sourceTree = "<group>"; };
+		9F0F56B925F001CC00CEC934 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		9F0F56BA25F001CC00CEC934 /* BookListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListAssembly.swift; sourceTree = "<group>"; };
+		9F0F56BB25F001CC00CEC934 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		9F0F56C125F001D400CEC934 /* BookList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookList.storyboard; sourceTree = "<group>"; };
+		9F0F56C525F0055800CEC934 /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
+		9F0F56C625F0055800CEC934 /* BookListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListTableViewCell.xib; sourceTree = "<group>"; };
+		9F0F56CC25F00ED900CEC934 /* BookListTableViewCellValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCellValues.swift; sourceTree = "<group>"; };
 		9FC3B0CB25066D640074D6ED /* ebook-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebook-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC3B0CE25066D640074D6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC3B0D725066D660074D6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +154,37 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		9F0F56B625EFF3B800CEC934 /* book */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56B725EFF3BD00CEC934 /* list */,
+			);
+			path = book;
+			sourceTree = "<group>";
+		};
+		9F0F56B725EFF3BD00CEC934 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56C425F0053A00CEC934 /* cell */,
+				9F0F56B825F001CC00CEC934 /* BookListNavigator.swift */,
+				9F0F56B925F001CC00CEC934 /* BookListViewController.swift */,
+				9F0F56BA25F001CC00CEC934 /* BookListAssembly.swift */,
+				9F0F56BB25F001CC00CEC934 /* BookListViewModel.swift */,
+				9F0F56C125F001D400CEC934 /* BookList.storyboard */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		9F0F56C425F0053A00CEC934 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56C525F0055800CEC934 /* BookListTableViewCell.swift */,
+				9F0F56C625F0055800CEC934 /* BookListTableViewCell.xib */,
+				9F0F56CC25F00ED900CEC934 /* BookListTableViewCellValues.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		9FC3B0C225066D640074D6ED = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +242,7 @@
 		9FC3B0EC250675060074D6ED /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F56B625EFF3B800CEC934 /* book */,
 				9FC3B0FF250677A60074D6ED /* inital */,
 			);
 			path = ui;
@@ -353,9 +401,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0F56C225F001D400CEC934 /* BookList.storyboard in Resources */,
 				9F0F568325EFC9E800CEC934 /* localized.strings in Resources */,
 				9FC3B11825067F480074D6ED /* InitialViewController.storyboard in Resources */,
 				9FC3B0DB25066D660074D6ED /* LaunchScreen.storyboard in Resources */,
+				9F0F56C825F0055800CEC934 /* BookListTableViewCell.xib in Resources */,
 				9FC3B0D825066D660074D6ED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,9 +458,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0F56C725F0055800CEC934 /* BookListTableViewCell.swift in Sources */,
 				9F0F569C25EFD78500CEC934 /* SearchBook.swift in Sources */,
 				9FC3B0FE250677830074D6ED /* Navigator.swift in Sources */,
 				9FC3B11025067E960074D6ED /* Resolver+Extension.swift in Sources */,
+				9F0F56BF25F001CC00CEC934 /* BookListViewModel.swift in Sources */,
 				9FC3B0F9250675F70074D6ED /* Router.swift in Sources */,
 				9FC3B10D25067E630074D6ED /* ViewControllerProvider.swift in Sources */,
 				9FC3B105250677B80074D6ED /* InitialViewController.swift in Sources */,
@@ -426,13 +478,17 @@
 				9F0F568825EFCAF300CEC934 /* InitialViewControllerValues.swift in Sources */,
 				9F0F569825EFD72400CEC934 /* UserDefaultsManager.swift in Sources */,
 				9FC3B0EA2506740C0074D6ED /* R.generated.swift in Sources */,
+				9F0F56BE25F001CC00CEC934 /* BookListAssembly.swift in Sources */,
 				9F0F568B25EFCBA500CEC934 /* UIViewController+Extension.swift in Sources */,
+				9F0F56BD25F001CC00CEC934 /* BookListViewController.swift in Sources */,
 				9FC3B11625067EF00074D6ED /* DataAssembly.swift in Sources */,
+				9F0F56BC25F001CC00CEC934 /* BookListNavigator.swift in Sources */,
 				9FC3B1232506825B0074D6ED /* DataAssembly+Mappers.swift in Sources */,
 				9FC3B11A250680E00074D6ED /* AppAssembly.swift in Sources */,
 				9F0F569925EFD72400CEC934 /* UserDefaultsManagerImpl.swift in Sources */,
 				9FC3B104250677B80074D6ED /* InitialNavigator.swift in Sources */,
 				9FC3B0FC250676310074D6ED /* Presentable.swift in Sources */,
+				9F0F56CD25F00ED900CEC934 /* BookListTableViewCellValues.swift in Sources */,
 				9F0F567D25EFC32E00CEC934 /* UIView+Extension.swift in Sources */,
 				9FC3B125250682640074D6ED /* DataAssembly+Repositories.swift in Sources */,
 			);

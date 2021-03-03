@@ -81,6 +81,14 @@ private extension InitialViewController {
                 }
             })
             .disposed(by: disposeBag)
+        
+        viewModel
+            .navigateToBookList
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigator.navigate(to: .bookList)
+            })
+            .disposed(by: disposeBag)
     }
 }
 

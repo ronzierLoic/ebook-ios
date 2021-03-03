@@ -14,3 +14,7 @@
 "Initial.book.author" = "Auteur du livre";
 "Initial.search.button" = "Recherche";
 "Initial.my.library.button" = "Ma bibliothèque";
+
+// MARK: - BookListViewController
+
+"Book.list.title.controller" = "Résultat de la recherche";
