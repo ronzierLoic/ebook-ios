@@ -9,9 +9,11 @@
 import UIKit
 import RxSwift
 
-class MyLibraryViewController: UITableViewController {
+class MyLibraryViewController: UIViewController {
     // MARK: - Outlets
-
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var errorLabel: UILabel!
+    
     // MARK: - Properties
     private var navigator: MyLibraryNavigator!
     private var viewModel: MyLibraryViewModel!
@@ -35,29 +37,39 @@ class MyLibraryViewController: UITableViewController {
 // MARK: - Private function
 private extension MyLibraryViewController {
     func setupUI() {
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(
             UINib(nibName: R.nib.bookListTableViewCell.name, bundle: nil),
             forCellReuseIdentifier: R.reuseIdentifier.bookListTableViewCell.identifier
         )
+        
+        errorLabel.isHidden = true
+        errorLabel.text = R.string.localized.myLibraryNoFavori()
     }
     
     func loadViewModel() {
         guard let favoriteBook = viewModel.retrieveFavoriteBooks() else {
-            // TODO: Handle nil
+            tableView.isHidden = true
+            errorLabel.isHidden = false
             return
         }
-        
+
         bookListWrapper = favoriteBook
     }
 }
 
 // MARK: - TableView Delgate & DataSource
-extension MyLibraryViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension MyLibraryViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        tableView.isHidden = bookListWrapper.isEmpty
+        errorLabel.isHidden = !bookListWrapper.isEmpty
+        
         return bookListWrapper.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.bookListTableViewCell, for: indexPath) else {
             return UITableViewCell()
         }

@@ -9,9 +9,11 @@
 import UIKit
 import RxSwift
 
-class BookListViewController: UITableViewController {
+class BookListViewController: UIViewController {
     // MARK: - Outlets
-
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var errorLabel: UILabel!
+    
     // MARK: - Properties
     private var navigator: BookListNavigator!
     private var viewModel: BookListViewModel!
@@ -36,10 +38,15 @@ class BookListViewController: UITableViewController {
 // MARK: - Private function
 private extension BookListViewController {
     func setupUI() {
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(
             UINib(nibName: R.nib.bookListTableViewCell.name, bundle: nil),
             forCellReuseIdentifier: R.reuseIdentifier.bookListTableViewCell.identifier
         )
+        
+        errorLabel.isHidden = true
+        errorLabel.text = R.string.localized.bookListNoResult()
     }
     
     func loadViewModel() {
@@ -53,18 +60,30 @@ private extension BookListViewController {
                 guard let self = self else { return }
                 self.title = bookResponseWrapper.title
                 self.bookListWrapper = bookResponseWrapper.bookList
+                
+                self.tableView.isHidden = self.bookListWrapper.isEmpty
+                self.errorLabel.isHidden = !self.bookListWrapper.isEmpty
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .error
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.tableView.isHidden = true
+                self.errorLabel.isHidden = false
             })
             .disposed(by: disposeBag)
     }
 }
 
 // MARK: - TableView Delgate & DataSource
-extension BookListViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension BookListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookListWrapper.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.bookListTableViewCell, for: indexPath) else {
             return UITableViewCell()
         }

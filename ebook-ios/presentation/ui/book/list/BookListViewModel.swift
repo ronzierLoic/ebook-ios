@@ -17,6 +17,7 @@ class BookListViewModel {
     
     // MARK: Outputs
     var bookResponse: PublishSubject<BookResponseViewDataWrapper> = PublishSubject()
+    var error: PublishSubject<Void> = PublishSubject()
     
     init(searchBook: SearchBook, bookRepository: BookRepository) {
         self.searchBook = searchBook
@@ -28,9 +29,8 @@ class BookListViewModel {
             .map(BookResponseViewDataWrapper.init)
             .subscribe(onSuccess: { [weak self] bookResponseWrapper in
                 self?.bookResponse.onNext(bookResponseWrapper)
-            }, onError: { err in
-                // TODO: Handle error
-                print(err.localizedDescription)
+            }, onError: { [weak self] _ in
+                self?.error.onNext()
             })
             .disposed(by: bookDisposeBag)
     }

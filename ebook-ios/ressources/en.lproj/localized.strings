@@ -16,7 +16,9 @@
 
 // MARK: - BookListViewController
 "Book.list.title.controller" = "Résultat de la recherche (%d)";
+"Book.list.no.result" = "Aucun resultat trouvé";
 
 // MARK: - MyLibraryViewController
 "My.library.title.controller" = "Ma bibliothèque";
+"My.library.no.favori" = "Aucun favori trouvé";
 
