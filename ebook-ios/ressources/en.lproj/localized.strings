@@ -7,7 +7,6 @@
 */
 
 // MARK: - InitalViewController
-
 "Initial.title.controller" = "Ebook";
 "Initial.title" = "Book Store";
 "Initial.book.title" = "Titre du livre";
@@ -16,5 +15,8 @@
 "Initial.my.library.button" = "Ma bibliothèque";
 
 // MARK: - BookListViewController
-
 "Book.list.title.controller" = "Résultat de la recherche (%d)";
+
+// MARK: - MyLibraryViewController
+"My.library.title.controller" = "Ma bibliothèque";
+

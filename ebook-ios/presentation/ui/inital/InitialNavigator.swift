@@ -11,6 +11,7 @@ import UIKit
 class InitialNavigator: Navigator {
     enum Destination {
         case bookList(searchBook: SearchBook)
+        case myLibrary
     }
     
     private weak var viewControllerProvider: ViewControllerProvider?
@@ -24,7 +25,7 @@ class InitialNavigator: Navigator {
     func navigate(to destination: Destination) {
         let controller = makeViewContoller(destination: destination)
         switch destination {
-        case .bookList:
+        case .bookList, .myLibrary:
             router.push(controller)
         }
     }
@@ -37,6 +38,8 @@ private extension InitialNavigator {
         switch destination {
         case .bookList(let searchBook):
             return viewControllerProvider.bookListViewController(searchBook: searchBook)
+        case .myLibrary:
+            return viewControllerProvider.myLibraryViewController()
         }
     }
 }

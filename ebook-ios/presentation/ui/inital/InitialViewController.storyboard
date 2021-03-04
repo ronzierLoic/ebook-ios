@@ -94,6 +94,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Ma bibliothèque"/>
+                                                <connections>
+                                                    <action selector="myLibraryButtonTapped:" destination="fes-TV-fWx" eventType="touchUpInside" id="mtX-jm-zCU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
