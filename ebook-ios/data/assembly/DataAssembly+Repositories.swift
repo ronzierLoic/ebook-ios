@@ -10,6 +10,13 @@ import Swinject
 
 extension DataAssembly {
     func assembleRepositories(in container: Container) {
-        
+        container.register(BookRepository.self) { resolver in
+            BookRepository(
+                userDefaultsManager: resolver.forceResolve(UserDefaultsManager.self),
+                apiManager: resolver.forceResolve(ApiManager.self),
+                bookMapper: resolver.forceResolve(BookMapper.self)
+            )
+        }
+        .inObjectScope(.container)
     }
 }

@@ -1,0 +1,26 @@
+/* 
+  localized.strings
+  ebook-ios
+
+  Created by Loic RONZIER on 03/03/2021.
+  Copyright © 2021 Loic RONZIER. All rights reserved.
+*/
+
+// MARK: - InitalViewController
+"Initial.title.controller" = "Ebook";
+"Initial.title" = "Book Store";
+"Initial.book.title" = "Titre du livre";
+"Initial.book.author" = "Auteur du livre";
+"Initial.search.button" = "Recherche";
+"Initial.my.library.button" = "Ma bibliothèque";
+
+// MARK: - BookListViewController
+"Book.list.title.controller" = "Résultat de la recherche (%d)";
+"Book.list.no.result" = "Aucun resultat trouvé";
+
+// MARK: - MyLibraryViewController
+"My.library.title.controller" = "Ma bibliothèque";
+"My.library.no.favori" = "Aucun favori trouvé";
+
+// MARK: - BookDetailsViewController
+"Book.details.close.button" = "Fermer";

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book List View Controller-->
+        <scene sceneID="wst-bG-iie">
+            <objects>
+                <viewController storyboardIdentifier="BookListViewController" id="2ec-YD-96Q" customClass="BookListViewController" customModule="ebook_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Vf-2K-c3a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TeT-25-1j4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucun resultat trouvé" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfU-GA-cDu">
+                                <rect key="frame" x="8" y="440" width="398" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aET-7d-f0n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aET-7d-f0n" firstAttribute="trailing" secondItem="qfU-GA-cDu" secondAttribute="trailing" constant="8" id="0E5-Hd-jYo"/>
+                            <constraint firstItem="aET-7d-f0n" firstAttribute="trailing" secondItem="TeT-25-1j4" secondAttribute="trailing" id="GVo-IS-ipO"/>
+                            <constraint firstItem="TeT-25-1j4" firstAttribute="leading" secondItem="aET-7d-f0n" secondAttribute="leading" id="TsE-HB-qqq"/>
+                            <constraint firstItem="qfU-GA-cDu" firstAttribute="leading" secondItem="aET-7d-f0n" secondAttribute="leading" constant="8" id="gX6-WG-x83"/>
+                            <constraint firstItem="aET-7d-f0n" firstAttribute="bottom" secondItem="TeT-25-1j4" secondAttribute="bottom" id="gau-PO-HzV"/>
+                            <constraint firstItem="TeT-25-1j4" firstAttribute="top" secondItem="aET-7d-f0n" secondAttribute="top" id="t6C-yz-Cyj"/>
+                            <constraint firstItem="qfU-GA-cDu" firstAttribute="centerY" secondItem="aET-7d-f0n" secondAttribute="centerY" id="xjg-8J-gc8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="qfU-GA-cDu" id="Ou2-a4-xfy"/>
+                        <outlet property="tableView" destination="TeT-25-1j4" id="Xx6-Ok-hsJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aax-4z-hm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1449" y="69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
