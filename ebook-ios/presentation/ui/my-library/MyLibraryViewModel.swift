@@ -21,4 +21,3 @@ class MyLibraryViewModel {
         bookRepository.removeFavoriteBook(book: bookWrapper.book)
     }
 }
-
