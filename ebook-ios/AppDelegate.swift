@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         prepareDependenciesInjections()
         prepareApp()
-        setupAppareance()
+        setupAppearance()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootNavigationController
@@ -58,7 +58,7 @@ private extension AppDelegate {
         appNavigator = assembler.resolver.forceResolve(AppNavigator.self, arguments: viewControllerProvider, applicationRouter)
     }
     
-    func setupAppareance() {
+    func setupAppearance() {
         UINavigationBar.appearance().barTintColor = R.color.primary()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
