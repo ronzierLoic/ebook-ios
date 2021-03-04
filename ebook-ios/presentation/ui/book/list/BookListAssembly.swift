@@ -14,13 +14,16 @@ class BookListAssembly: Assembly {
             BookListNavigator()
         }
 
-        container.register(BookListViewModel.self) { _ in
-            BookListViewModel()
+        container.register(BookListViewModel.self) { (resolver: Resolver, searchBook: SearchBook) in
+            BookListViewModel(
+                searchBook: searchBook,
+                bookRepository: resolver.forceResolve(BookRepository.self)
+            )
         }
 
-        container.register(BookListViewController.self) { resolver in
+        container.register(BookListViewController.self) { (resolver: Resolver, searchBook: SearchBook) in
             BookListViewController.makeViewController(
-                viewModel: resolver.forceResolve(BookListViewModel.self),
+                viewModel: resolver.forceResolve(BookListViewModel.self, argument: searchBook),
                 navigator: resolver.forceResolve(BookListNavigator.self)
             )
         }

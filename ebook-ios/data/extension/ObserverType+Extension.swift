@@ -1,5 +1,5 @@
 //
-//  ObserverType.swift
+//  ObserverType+Extension.swift
 //  ebook-ios
 //
 //  Created by Loic RONZIER on 03/03/2021.

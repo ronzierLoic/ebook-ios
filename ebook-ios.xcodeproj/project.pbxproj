@@ -17,9 +17,7 @@
 		9F0F569825EFD72400CEC934 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569625EFD72400CEC934 /* UserDefaultsManager.swift */; };
 		9F0F569925EFD72400CEC934 /* UserDefaultsManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569725EFD72400CEC934 /* UserDefaultsManagerImpl.swift */; };
 		9F0F569C25EFD78500CEC934 /* SearchBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F569B25EFD78500CEC934 /* SearchBook.swift */; };
-		9F0F56AE25EFDF0E00CEC934 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56AD25EFDF0E00CEC934 /* RxCocoa */; };
-		9F0F56B025EFDF0E00CEC934 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56AF25EFDF0E00CEC934 /* RxSwift */; };
-		9F0F56B425EFDF8A00CEC934 /* ObserverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */; };
+		9F0F56B425EFDF8A00CEC934 /* ObserverType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B325EFDF8A00CEC934 /* ObserverType+Extension.swift */; };
 		9F0F56BC25F001CC00CEC934 /* BookListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B825F001CC00CEC934 /* BookListNavigator.swift */; };
 		9F0F56BD25F001CC00CEC934 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56B925F001CC00CEC934 /* BookListViewController.swift */; };
 		9F0F56BE25F001CC00CEC934 /* BookListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56BA25F001CC00CEC934 /* BookListAssembly.swift */; };
@@ -28,6 +26,24 @@
 		9F0F56C725F0055800CEC934 /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56C525F0055800CEC934 /* BookListTableViewCell.swift */; };
 		9F0F56C825F0055800CEC934 /* BookListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F56C625F0055800CEC934 /* BookListTableViewCell.xib */; };
 		9F0F56CD25F00ED900CEC934 /* BookListTableViewCellValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56CC25F00ED900CEC934 /* BookListTableViewCellValues.swift */; };
+		9F0F56D225F01F2500CEC934 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56D125F01F2500CEC934 /* Moya */; };
+		9F0F56D425F01F2500CEC934 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F56D325F01F2500CEC934 /* RxMoya */; };
+		9F0F56DA25F01F6E00CEC934 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56D825F01F6E00CEC934 /* ApiManager.swift */; };
+		9F0F56DB25F01F6E00CEC934 /* ApiManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56D925F01F6E00CEC934 /* ApiManagerImpl.swift */; };
+		9F0F56E025F01F9000CEC934 /* ApiServiceValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56DF25F01F9000CEC934 /* ApiServiceValues.swift */; };
+		9F0F56E425F020D500CEC934 /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56E325F020D500CEC934 /* Single+Extension.swift */; };
+		9F0F56E825F020F300CEC934 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56E725F020F300CEC934 /* ApiError.swift */; };
+		9F0F56EE25F026DD00CEC934 /* BookReponseRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56ED25F026DD00CEC934 /* BookReponseRemoteEntity.swift */; };
+		9F0F56F125F026E600CEC934 /* BookRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56F025F026E600CEC934 /* BookRemoteEntity.swift */; };
+		9F0F56F625F0270300CEC934 /* ImageLinkRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56F525F0270300CEC934 /* ImageLinkRemoteEntity.swift */; };
+		9F0F56F925F0270900CEC934 /* VolumeInformationRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56F825F0270900CEC934 /* VolumeInformationRemoteEntity.swift */; };
+		9F0F56FF25F027B700CEC934 /* BookReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F56FE25F027B700CEC934 /* BookReponse.swift */; };
+		9F0F570225F027ED00CEC934 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F570125F027ED00CEC934 /* Book.swift */; };
+		9F0F570525F0281A00CEC934 /* VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F570425F0281A00CEC934 /* VolumeInformation.swift */; };
+		9F0F570A25F029D300CEC934 /* BookMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F570925F029D300CEC934 /* BookMapper.swift */; };
+		9F0F571025F0365500CEC934 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F570F25F0365500CEC934 /* Kingfisher */; };
+		9F0F571525F0367C00CEC934 /* BookResponseViewDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F571425F0367C00CEC934 /* BookResponseViewDataWrapper.swift */; };
+		9F0F571825F036AF00CEC934 /* BookViewDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F571725F036AF00CEC934 /* BookViewDataWrapper.swift */; };
 		9FC3B0CF25066D640074D6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B0CE25066D640074D6ED /* AppDelegate.swift */; };
 		9FC3B0D825066D660074D6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D725066D660074D6ED /* Assets.xcassets */; };
 		9FC3B0DB25066D660074D6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D925066D660074D6ED /* LaunchScreen.storyboard */; };
@@ -61,7 +77,7 @@
 		9F0F569625EFD72400CEC934 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		9F0F569725EFD72400CEC934 /* UserDefaultsManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerImpl.swift; sourceTree = "<group>"; };
 		9F0F569B25EFD78500CEC934 /* SearchBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBook.swift; sourceTree = "<group>"; };
-		9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverType.swift; sourceTree = "<group>"; };
+		9F0F56B325EFDF8A00CEC934 /* ObserverType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObserverType+Extension.swift"; sourceTree = "<group>"; };
 		9F0F56B825F001CC00CEC934 /* BookListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListNavigator.swift; sourceTree = "<group>"; };
 		9F0F56B925F001CC00CEC934 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		9F0F56BA25F001CC00CEC934 /* BookListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListAssembly.swift; sourceTree = "<group>"; };
@@ -70,6 +86,21 @@
 		9F0F56C525F0055800CEC934 /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
 		9F0F56C625F0055800CEC934 /* BookListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListTableViewCell.xib; sourceTree = "<group>"; };
 		9F0F56CC25F00ED900CEC934 /* BookListTableViewCellValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCellValues.swift; sourceTree = "<group>"; };
+		9F0F56D825F01F6E00CEC934 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		9F0F56D925F01F6E00CEC934 /* ApiManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerImpl.swift; sourceTree = "<group>"; };
+		9F0F56DF25F01F9000CEC934 /* ApiServiceValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceValues.swift; sourceTree = "<group>"; };
+		9F0F56E325F020D500CEC934 /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
+		9F0F56E725F020F300CEC934 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		9F0F56ED25F026DD00CEC934 /* BookReponseRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReponseRemoteEntity.swift; sourceTree = "<group>"; };
+		9F0F56F025F026E600CEC934 /* BookRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRemoteEntity.swift; sourceTree = "<group>"; };
+		9F0F56F525F0270300CEC934 /* ImageLinkRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLinkRemoteEntity.swift; sourceTree = "<group>"; };
+		9F0F56F825F0270900CEC934 /* VolumeInformationRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInformationRemoteEntity.swift; sourceTree = "<group>"; };
+		9F0F56FE25F027B700CEC934 /* BookReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReponse.swift; sourceTree = "<group>"; };
+		9F0F570125F027ED00CEC934 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		9F0F570425F0281A00CEC934 /* VolumeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInformation.swift; sourceTree = "<group>"; };
+		9F0F570925F029D300CEC934 /* BookMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMapper.swift; sourceTree = "<group>"; };
+		9F0F571425F0367C00CEC934 /* BookResponseViewDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponseViewDataWrapper.swift; sourceTree = "<group>"; };
+		9F0F571725F036AF00CEC934 /* BookViewDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewDataWrapper.swift; sourceTree = "<group>"; };
 		9FC3B0CB25066D640074D6ED /* ebook-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebook-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC3B0CE25066D640074D6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC3B0D725066D660074D6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,10 +134,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0F56AE25EFDF0E00CEC934 /* RxCocoa in Frameworks */,
 				9F0F567525EFAED600CEC934 /* Swinject in Frameworks */,
-				9F0F56B025EFDF0E00CEC934 /* RxSwift in Frameworks */,
 				9F0F567925EFAF1A00CEC934 /* Rswift in Frameworks */,
+				9F0F56D425F01F2500CEC934 /* RxMoya in Frameworks */,
+				9F0F56D225F01F2500CEC934 /* Moya in Frameworks */,
+				9F0F571025F0365500CEC934 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +156,7 @@
 		9F0F568F25EFD5AA00CEC934 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F56FC25F0276B00CEC934 /* book */,
 				9F0F569B25EFD78500CEC934 /* SearchBook.swift */,
 			);
 			path = model;
@@ -132,6 +165,7 @@
 		9F0F569425EFD6D400CEC934 /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F56D625F01F5A00CEC934 /* api */,
 				9F0F569525EFD70300CEC934 /* user-defaults */,
 			);
 			path = manager;
@@ -149,7 +183,8 @@
 		9F0F56B225EFDF8300CEC934 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				9F0F56B325EFDF8A00CEC934 /* ObserverType.swift */,
+				9F0F56B325EFDF8A00CEC934 /* ObserverType+Extension.swift */,
+				9F0F56E325F020D500CEC934 /* Single+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -183,6 +218,94 @@
 				9F0F56CC25F00ED900CEC934 /* BookListTableViewCellValues.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		9F0F56D625F01F5A00CEC934 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56DD25F01F8900CEC934 /* service */,
+				9F0F56D825F01F6E00CEC934 /* ApiManager.swift */,
+				9F0F56D925F01F6E00CEC934 /* ApiManagerImpl.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		9F0F56DD25F01F8900CEC934 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56DF25F01F9000CEC934 /* ApiServiceValues.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		9F0F56E625F020E900CEC934 /* error */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56E725F020F300CEC934 /* ApiError.swift */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
+		9F0F56EA25F026C000CEC934 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56EB25F026CA00CEC934 /* remote */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		9F0F56EB25F026CA00CEC934 /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56F425F026FA00CEC934 /* image */,
+				9F0F56EC25F026D100CEC934 /* book */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		9F0F56EC25F026D100CEC934 /* book */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56ED25F026DD00CEC934 /* BookReponseRemoteEntity.swift */,
+				9F0F56F025F026E600CEC934 /* BookRemoteEntity.swift */,
+				9F0F56F825F0270900CEC934 /* VolumeInformationRemoteEntity.swift */,
+			);
+			path = book;
+			sourceTree = "<group>";
+		};
+		9F0F56F425F026FA00CEC934 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56F525F0270300CEC934 /* ImageLinkRemoteEntity.swift */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		9F0F56FC25F0276B00CEC934 /* book */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F56FE25F027B700CEC934 /* BookReponse.swift */,
+				9F0F570125F027ED00CEC934 /* Book.swift */,
+				9F0F570425F0281A00CEC934 /* VolumeInformation.swift */,
+			);
+			path = book;
+			sourceTree = "<group>";
+		};
+		9F0F570725F029C200CEC934 /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F570925F029D300CEC934 /* BookMapper.swift */,
+			);
+			path = mapper;
+			sourceTree = "<group>";
+		};
+		9F0F571225F0365C00CEC934 /* data-wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F571425F0367C00CEC934 /* BookResponseViewDataWrapper.swift */,
+				9F0F571725F036AF00CEC934 /* BookViewDataWrapper.swift */,
+			);
+			path = "data-wrapper";
 			sourceTree = "<group>";
 		};
 		9FC3B0C225066D640074D6ED = {
@@ -230,6 +353,7 @@
 		9FC3B0EB250675020074D6ED /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F571225F0365C00CEC934 /* data-wrapper */,
 				9FC3B10E25067E890074D6ED /* extension */,
 				9FC3B0F12506759C0074D6ED /* navigation */,
 				9FC3B0EC250675060074D6ED /* ui */,
@@ -301,6 +425,9 @@
 		9FC3B11325067ECD0074D6ED /* data */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F570725F029C200CEC934 /* mapper */,
+				9F0F56EA25F026C000CEC934 /* entity */,
+				9F0F56E625F020E900CEC934 /* error */,
 				9F0F56B225EFDF8300CEC934 /* extension */,
 				9FC3B11425067EE70074D6ED /* assembly */,
 				9F0F569425EFD6D400CEC934 /* manager */,
@@ -351,8 +478,9 @@
 			packageProductDependencies = (
 				9F0F567425EFAED600CEC934 /* Swinject */,
 				9F0F567825EFAF1A00CEC934 /* Rswift */,
-				9F0F56AD25EFDF0E00CEC934 /* RxCocoa */,
-				9F0F56AF25EFDF0E00CEC934 /* RxSwift */,
+				9F0F56D125F01F2500CEC934 /* Moya */,
+				9F0F56D325F01F2500CEC934 /* RxMoya */,
+				9F0F570F25F0365500CEC934 /* Kingfisher */,
 			);
 			productName = "starter-kit-ios";
 			productReference = 9FC3B0CB25066D640074D6ED /* ebook-ios.app */;
@@ -385,7 +513,8 @@
 			packageReferences = (
 				9F0F567325EFAED600CEC934 /* XCRemoteSwiftPackageReference "Swinject" */,
 				9F0F567725EFAF1A00CEC934 /* XCRemoteSwiftPackageReference "R.swift" */,
-				9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				9F0F56D025F01F2500CEC934 /* XCRemoteSwiftPackageReference "Moya" */,
+				9F0F570E25F0365500CEC934 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9FC3B0CC25066D640074D6ED /* Products */;
 			projectDirPath = "";
@@ -461,30 +590,45 @@
 				9F0F56C725F0055800CEC934 /* BookListTableViewCell.swift in Sources */,
 				9F0F569C25EFD78500CEC934 /* SearchBook.swift in Sources */,
 				9FC3B0FE250677830074D6ED /* Navigator.swift in Sources */,
+				9F0F570A25F029D300CEC934 /* BookMapper.swift in Sources */,
+				9F0F56E425F020D500CEC934 /* Single+Extension.swift in Sources */,
+				9F0F56DB25F01F6E00CEC934 /* ApiManagerImpl.swift in Sources */,
 				9FC3B11025067E960074D6ED /* Resolver+Extension.swift in Sources */,
+				9F0F56EE25F026DD00CEC934 /* BookReponseRemoteEntity.swift in Sources */,
 				9F0F56BF25F001CC00CEC934 /* BookListViewModel.swift in Sources */,
 				9FC3B0F9250675F70074D6ED /* Router.swift in Sources */,
 				9FC3B10D25067E630074D6ED /* ViewControllerProvider.swift in Sources */,
+				9F0F56E025F01F9000CEC934 /* ApiServiceValues.swift in Sources */,
 				9FC3B105250677B80074D6ED /* InitialViewController.swift in Sources */,
+				9F0F570525F0281A00CEC934 /* VolumeInformation.swift in Sources */,
 				9FC3B0FA250675F70074D6ED /* RouterImpl.swift in Sources */,
 				9FC3B0CF25066D640074D6ED /* AppDelegate.swift in Sources */,
 				9FC3B106250677B80074D6ED /* InitialAssembly.swift in Sources */,
-				9F0F56B425EFDF8A00CEC934 /* ObserverType.swift in Sources */,
+				9F0F56F625F0270300CEC934 /* ImageLinkRemoteEntity.swift in Sources */,
+				9F0F56B425EFDF8A00CEC934 /* ObserverType+Extension.swift in Sources */,
 				9FC3B11225067EBF0074D6ED /* PresentationAssembly.swift in Sources */,
 				9FC3B11D250681480074D6ED /* AppNavigator.swift in Sources */,
+				9F0F571825F036AF00CEC934 /* BookViewDataWrapper.swift in Sources */,
+				9F0F56F925F0270900CEC934 /* VolumeInformationRemoteEntity.swift in Sources */,
+				9F0F56DA25F01F6E00CEC934 /* ApiManager.swift in Sources */,
 				9FC3B121250682520074D6ED /* DataAssembly+Managers.swift in Sources */,
 				9F0F569125EFD5CD00CEC934 /* BookRepository.swift in Sources */,
 				9FC3B107250677B80074D6ED /* InitialViewModel.swift in Sources */,
+				9F0F571525F0367C00CEC934 /* BookResponseViewDataWrapper.swift in Sources */,
 				9F0F568825EFCAF300CEC934 /* InitialViewControllerValues.swift in Sources */,
 				9F0F569825EFD72400CEC934 /* UserDefaultsManager.swift in Sources */,
 				9FC3B0EA2506740C0074D6ED /* R.generated.swift in Sources */,
 				9F0F56BE25F001CC00CEC934 /* BookListAssembly.swift in Sources */,
 				9F0F568B25EFCBA500CEC934 /* UIViewController+Extension.swift in Sources */,
+				9F0F56FF25F027B700CEC934 /* BookReponse.swift in Sources */,
 				9F0F56BD25F001CC00CEC934 /* BookListViewController.swift in Sources */,
 				9FC3B11625067EF00074D6ED /* DataAssembly.swift in Sources */,
+				9F0F56F125F026E600CEC934 /* BookRemoteEntity.swift in Sources */,
 				9F0F56BC25F001CC00CEC934 /* BookListNavigator.swift in Sources */,
 				9FC3B1232506825B0074D6ED /* DataAssembly+Mappers.swift in Sources */,
 				9FC3B11A250680E00074D6ED /* AppAssembly.swift in Sources */,
+				9F0F570225F027ED00CEC934 /* Book.swift in Sources */,
+				9F0F56E825F020F300CEC934 /* ApiError.swift in Sources */,
 				9F0F569925EFD72400CEC934 /* UserDefaultsManagerImpl.swift in Sources */,
 				9FC3B104250677B80074D6ED /* InitialNavigator.swift in Sources */,
 				9FC3B0FC250676310074D6ED /* Presentable.swift in Sources */,
@@ -714,12 +858,20 @@
 				minimumVersion = 5.3.0;
 			};
 		};
-		9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		9F0F56D025F01F2500CEC934 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.0;
+				minimumVersion = 14.0.1;
+			};
+		};
+		9F0F570E25F0365500CEC934 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -735,15 +887,20 @@
 			package = 9F0F567725EFAF1A00CEC934 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
 		};
-		9F0F56AD25EFDF0E00CEC934 /* RxCocoa */ = {
+		9F0F56D125F01F2500CEC934 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
+			package = 9F0F56D025F01F2500CEC934 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
-		9F0F56AF25EFDF0E00CEC934 /* RxSwift */ = {
+		9F0F56D325F01F2500CEC934 /* RxMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9F0F56AC25EFDF0E00CEC934 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
+			package = 9F0F56D025F01F2500CEC934 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		9F0F570F25F0365500CEC934 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F0F570E25F0365500CEC934 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

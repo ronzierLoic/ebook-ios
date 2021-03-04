@@ -17,4 +17,4 @@
 
 // MARK: - BookListViewController
 
-"Book.list.title.controller" = "Résultat de la recherche";
+"Book.list.title.controller" = "Résultat de la recherche (%d)";

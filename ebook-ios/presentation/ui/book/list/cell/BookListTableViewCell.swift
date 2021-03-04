@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BookListTableViewCell: UITableViewCell {
     // MARK: - Outlets
@@ -27,6 +28,13 @@ class BookListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+    }
+    
+    func setup(bookWrapper: BookViewDataWrapper) {
+        bookImageView.kf.setImage(with: bookWrapper.imageUrl, placeholder: R.image.book())
+        titleLabel.text = bookWrapper.title
+        authorLabel.text = bookWrapper.authors
+        descriptionLabel.text = bookWrapper.description
     }
 }
 
