@@ -18,10 +18,17 @@ class BookDetailsViewController: UIViewController {
     // MARK: - Properties
     private var navigator: BookDetailsNavigator!
     private var viewModel: BookDetailsViewModel!
-
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+}
+
+// MARK: - Private function
+private extension BookDetailsViewController {
+    func setupUI() {
         bookImageView.kf.setImage(with: viewModel.bookWrapper.imageUrl, placeholder: R.image.book())
         titleLabel.text = viewModel.bookWrapper.title
         authorLabel.text = viewModel.bookWrapper.authors
@@ -44,7 +51,7 @@ extension BookDetailsViewController {
         guard let viewController = R.storyboard.bookDetails.bookDetailsViewController() else {
             preconditionFailure()
         }
-    
+        
         viewController.navigator = navigator
         viewController.viewModel = viewModel
         
