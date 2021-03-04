@@ -69,9 +69,24 @@ extension BookListViewController {
             return UITableViewCell()
         }
         
+        cell.delegate = self
         cell.setup(bookWrapper: bookListWrapper[indexPath.row])
         
         return cell
+    }
+}
+
+// MARK: - BookListTableViewDelagate
+extension BookListViewController: BookListTableViewCellDelegate {
+    func bookmarkDidClick(bookWrapper: BookViewDataWrapper) {
+        bookListWrapper.forEach({
+            if $0.id == bookWrapper.id {
+                $0.toggleFavorite()
+                viewModel.favoriteBookTapped(bookWrapper: $0)
+            }
+        })
+        
+        tableView.reloadData()
     }
 }
 

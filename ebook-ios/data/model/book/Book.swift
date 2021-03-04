@@ -6,7 +6,8 @@
 //  Copyright © 2021 Loic RONZIER. All rights reserved.
 //
 
-struct Book {
+struct Book: Codable {
     let id: String
     let volumeInfo: VolumeInformation
+    var isFavorite: Bool = false
 }

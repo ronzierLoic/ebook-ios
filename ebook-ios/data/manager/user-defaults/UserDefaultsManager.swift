@@ -9,4 +9,7 @@
 protocol UserDefaultsManager {
     func saveLastSearchBook(with searchBook: SearchBook)
     func retrieveLastSearchBook() -> SearchBook?
+    
+    func saveFavoriteBookList(with books: [Book])
+    func retrieveFavoriteBookList() -> [Book]?
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2021 Loic RONZIER. All rights reserved.
 //
 
-struct VolumeInformation {
+struct VolumeInformation: Codable {
     let title: String
     let authors: [String]?
     let pageCount: Int?

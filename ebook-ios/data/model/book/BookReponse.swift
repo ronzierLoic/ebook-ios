@@ -8,5 +8,5 @@
 
 struct BookReponse {
     let totalBooks: Int
-    let bookList: [Book]
+    var bookList: [Book]
 }
