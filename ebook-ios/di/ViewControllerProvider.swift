@@ -31,13 +31,25 @@ extension ViewControllerProvider {
         return assembler.resolver.forceResolve(InitialViewController.self, arguments: self, router)
     }
     
-    func bookListViewController(searchBook: SearchBook) -> Presentable {
+    func bookListViewController(searchBook: SearchBook, router: Router) -> Presentable {
         let assembler = Assembler([BookListAssembly()], container: sharedContainer)
-        return assembler.resolver.forceResolve(BookListViewController.self, argument: searchBook)
+        return assembler.resolver.forceResolve(BookListViewController.self, arguments: searchBook, self, router)
     }
     
-    func myLibraryViewController() -> Presentable {
+    func myLibraryViewController(router: Router) -> Presentable {
         let assembler = Assembler([MyLibraryAssembly()], container: sharedContainer)
-        return assembler.resolver.forceResolve(MyLibraryViewController.self)
+        return assembler.resolver.forceResolve(MyLibraryViewController.self, arguments: self, router)
+    }
+    
+    func bookDetailsViewController(bookWrapper: BookViewDataWrapper) -> Presentable {
+        let navigationController = UINavigationController()
+        let router: Router = RouterImpl(rootController: navigationController)
+       
+        let assembler = Assembler([BookDetailsAssembly()], container: sharedContainer)
+        let controller = assembler.resolver.forceResolve(BookDetailsViewController.self, arguments: bookWrapper, router)
+        
+        router.setRootModule(controller)
+        
+        return router
     }
 }
