@@ -25,11 +25,7 @@ class BookViewDataWrapper {
     
     var authors: String? {
         guard let authors = book.volumeInfo.authors else { return nil }
-        var authorsString = authors.joined(separator: ", ")
-        if authors.count > 1 {
-            authorsString = String(authorsString.dropLast())
-        }
-        return authorsString
+        return authors.joined(separator: ", ")
     }
     
     var description: String? {
