@@ -10,18 +10,18 @@ import Swinject
 
 class InitialAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(InitialNavigator.self) { _ in
-            InitialNavigator()
+        container.register(InitialNavigator.self) { (_: Resolver, viewControllerProvider: ViewControllerProvider, router: Router) in
+            InitialNavigator(viewControllerProvider: viewControllerProvider, router: router)
         }
         
         container.register(InitialViewModel.self) { resolver in
             InitialViewModel(bookRepository: resolver.forceResolve(BookRepository.self))
         }
         
-        container.register(InitialViewController.self) { _ in
+        container.register(InitialViewController.self) { (resolver: Resolver, viewControllerProvider: ViewControllerProvider, router: Router) in
             InitialViewController.makeViewController(
-                viewModel: container.forceResolve(InitialViewModel.self),
-                navigator: container.forceResolve(InitialNavigator.self)
+                viewModel: resolver.forceResolve(InitialViewModel.self),
+                navigator: resolver.forceResolve(InitialNavigator.self, arguments: viewControllerProvider, router)
             )
         }
     }

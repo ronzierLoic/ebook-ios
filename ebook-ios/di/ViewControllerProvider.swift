@@ -26,8 +26,13 @@ class ViewControllerProvider {
 }
 
 extension ViewControllerProvider {
-    func initialViewControler() -> Presentable {
+    func initialViewControler(router: Router) -> Presentable {
         let assembler = Assembler([InitialAssembly()], container: sharedContainer)
-        return assembler.resolver.forceResolve(InitialViewController.self)
+        return assembler.resolver.forceResolve(InitialViewController.self, arguments: self, router)
+    }
+    
+    func bookListViewController() -> Presentable {
+        let assembler = Assembler([BookListAssembly()], container: sharedContainer)
+        return assembler.resolver.forceResolve(BookListViewController.self)
     }
 }
