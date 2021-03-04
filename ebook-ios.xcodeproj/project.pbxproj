@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9F0F567525EFAED600CEC934 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F567425EFAED600CEC934 /* Swinject */; };
 		9F0F567925EFAF1A00CEC934 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 9F0F567825EFAF1A00CEC934 /* Rswift */; };
+		9F0F567D25EFC32E00CEC934 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F567C25EFC32E00CEC934 /* UIView+Extension.swift */; };
+		9F0F568325EFC9E800CEC934 /* localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F568525EFC9E800CEC934 /* localized.strings */; };
+		9F0F568825EFCAF300CEC934 /* InitialViewControllerValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F568725EFCAF300CEC934 /* InitialViewControllerValues.swift */; };
+		9F0F568B25EFCBA500CEC934 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F568A25EFCBA500CEC934 /* UIViewController+Extension.swift */; };
 		9FC3B0CF25066D640074D6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B0CE25066D640074D6ED /* AppDelegate.swift */; };
 		9FC3B0D825066D660074D6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D725066D660074D6ED /* Assets.xcassets */; };
 		9FC3B0DB25066D660074D6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B0D925066D660074D6ED /* LaunchScreen.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F0F567C25EFC32E00CEC934 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9F0F568425EFC9E800CEC934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localized.strings; sourceTree = "<group>"; };
+		9F0F568725EFCAF300CEC934 /* InitialViewControllerValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerValues.swift; sourceTree = "<group>"; };
+		9F0F568A25EFCBA500CEC934 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		9FC3B0CB25066D640074D6ED /* ebook-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebook-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC3B0CE25066D640074D6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC3B0D725066D660074D6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 				9FC3B101250677B80074D6ED /* InitialViewController.swift */,
 				9FC3B11725067F480074D6ED /* InitialViewController.storyboard */,
 				9FC3B103250677B80074D6ED /* InitialViewModel.swift */,
+				9F0F568725EFCAF300CEC934 /* InitialViewControllerValues.swift */,
 			);
 			path = inital;
 			sourceTree = "<group>";
@@ -180,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				9FC3B10F25067E960074D6ED /* Resolver+Extension.swift */,
+				9F0F567C25EFC32E00CEC934 /* UIView+Extension.swift */,
+				9F0F568A25EFCBA500CEC934 /* UIViewController+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				9FC3B0D725066D660074D6ED /* Assets.xcassets */,
+				9F0F568525EFC9E800CEC934 /* localized.strings */,
 			);
 			path = ressources;
 			sourceTree = "<group>";
@@ -244,7 +256,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Loic RONZIER";
 				TargetAttributes = {
 					9FC3B0CA25066D640074D6ED = {
@@ -279,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0F568325EFC9E800CEC934 /* localized.strings in Resources */,
 				9FC3B11825067F480074D6ED /* InitialViewController.storyboard in Resources */,
 				9FC3B0DB25066D660074D6ED /* LaunchScreen.storyboard in Resources */,
 				9FC3B0D825066D660074D6ED /* Assets.xcassets in Resources */,
@@ -345,12 +358,15 @@
 				9FC3B11D250681480074D6ED /* AppNavigator.swift in Sources */,
 				9FC3B121250682520074D6ED /* DataAssembly+Managers.swift in Sources */,
 				9FC3B107250677B80074D6ED /* InitialViewModel.swift in Sources */,
+				9F0F568825EFCAF300CEC934 /* InitialViewControllerValues.swift in Sources */,
 				9FC3B0EA2506740C0074D6ED /* R.generated.swift in Sources */,
+				9F0F568B25EFCBA500CEC934 /* UIViewController+Extension.swift in Sources */,
 				9FC3B11625067EF00074D6ED /* DataAssembly.swift in Sources */,
 				9FC3B1232506825B0074D6ED /* DataAssembly+Mappers.swift in Sources */,
 				9FC3B11A250680E00074D6ED /* AppAssembly.swift in Sources */,
 				9FC3B104250677B80074D6ED /* InitialNavigator.swift in Sources */,
 				9FC3B0FC250676310074D6ED /* Presentable.swift in Sources */,
+				9F0F567D25EFC32E00CEC934 /* UIView+Extension.swift in Sources */,
 				9FC3B125250682640074D6ED /* DataAssembly+Repositories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +374,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9F0F568525EFC9E800CEC934 /* localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F0F568425EFC9E800CEC934 /* en */,
+			);
+			name = localized.strings;
+			sourceTree = "<group>";
+		};
 		9FC3B0D925066D660074D6ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -395,6 +419,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -455,6 +480,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
