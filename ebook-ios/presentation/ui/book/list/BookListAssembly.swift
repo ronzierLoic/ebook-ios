@@ -10,8 +10,8 @@ import Swinject
 
 class BookListAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(BookListNavigator.self) { _ in
-            BookListNavigator()
+        container.register(BookListNavigator.self) { (_: Resolver, viewControllerProvider: ViewControllerProvider, router: Router) in
+            BookListNavigator(viewControllerProvider: viewControllerProvider, router: router)
         }
 
         container.register(BookListViewModel.self) { (resolver: Resolver, searchBook: SearchBook) in
@@ -21,10 +21,10 @@ class BookListAssembly: Assembly {
             )
         }
 
-        container.register(BookListViewController.self) { (resolver: Resolver, searchBook: SearchBook) in
+        container.register(BookListViewController.self) { (resolver: Resolver, searchBook: SearchBook, viewControllerProvider: ViewControllerProvider, router: Router) in
             BookListViewController.makeViewController(
                 viewModel: resolver.forceResolve(BookListViewModel.self, argument: searchBook),
-                navigator: resolver.forceResolve(BookListNavigator.self)
+                navigator: resolver.forceResolve(BookListNavigator.self, arguments: viewControllerProvider, router)
             )
         }
     }

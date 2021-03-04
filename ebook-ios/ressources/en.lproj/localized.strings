@@ -22,3 +22,5 @@
 "My.library.title.controller" = "Ma bibliothèque";
 "My.library.no.favori" = "Aucun favori trouvé";
 
+// MARK: - BookDetailsViewController
+"Book.details.close.button" = "Fermer";

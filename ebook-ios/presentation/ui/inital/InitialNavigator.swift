@@ -37,9 +37,9 @@ private extension InitialNavigator {
         
         switch destination {
         case .bookList(let searchBook):
-            return viewControllerProvider.bookListViewController(searchBook: searchBook)
+            return viewControllerProvider.bookListViewController(searchBook: searchBook, router: router)
         case .myLibrary:
-            return viewControllerProvider.myLibraryViewController()
+            return viewControllerProvider.myLibraryViewController(router: router)
         }
     }
 }

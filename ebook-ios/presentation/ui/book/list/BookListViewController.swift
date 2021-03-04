@@ -93,6 +93,10 @@ extension BookListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigator.navigate(to: .bookDetails(bookWrapper: bookListWrapper[indexPath.row]))
+    }
 }
 
 // MARK: - BookListTableViewDelagate
