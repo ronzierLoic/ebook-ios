@@ -42,6 +42,10 @@ private extension InitialViewController {
     @IBAction func searchBookButtonTapped(_ sender: Any) {
         viewModel.saveLastSearchBook(title: titleBookTextField.text, author: authorBookTextField.text)
     }
+    
+    @IBAction func myLibraryButtonTapped(_ sender: Any) {
+        navigator.navigate(to: .myLibrary)
+    }
 }
 
 // MARK: - Private function
