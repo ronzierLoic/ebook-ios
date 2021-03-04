@@ -34,4 +34,13 @@ class BookListViewModel {
             })
             .disposed(by: bookDisposeBag)
     }
+    
+    func favoriteBookTapped(bookWrapper: BookViewDataWrapper) {
+        switch bookWrapper.isFavorite {
+        case true:
+            bookRepository.addFavoriteBook(book: bookWrapper.book)
+        case false:
+            bookRepository.removeFavoriteBook(book: bookWrapper.book)
+        }
+    }
 }

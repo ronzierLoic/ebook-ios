@@ -9,10 +9,14 @@
 import UIKit
 
 class BookViewDataWrapper {
-    private let book: Book
+    var book: Book
     
     init(book: Book) {
         self.book = book
+    }
+    
+    var id: String {
+        book.id
     }
     
     var title: String {
@@ -36,5 +40,13 @@ class BookViewDataWrapper {
         guard let urlString = book.volumeInfo.image else { return nil }
         
         return URL(string: urlString)
+    }
+    
+    var isFavorite: Bool {
+        book.isFavorite
+    }
+    
+    func toggleFavorite() {
+        book.isFavorite.toggle()
     }
 }

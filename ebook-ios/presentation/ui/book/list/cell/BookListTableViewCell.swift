@@ -19,6 +19,10 @@ class BookListTableViewCell: UITableViewCell {
     @IBOutlet private weak var bookmarkContaineView: UIView!
     @IBOutlet private weak var bookmarkImageView: UIImageView!
     
+    // MARK: - Properties
+    weak var delegate: BookListTableViewCellDelegate?
+    private var bookWrapper: BookViewDataWrapper?
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.isHighlighted = false
@@ -31,10 +35,22 @@ class BookListTableViewCell: UITableViewCell {
     }
     
     func setup(bookWrapper: BookViewDataWrapper) {
+        self.bookWrapper = bookWrapper
         bookImageView.kf.setImage(with: bookWrapper.imageUrl, placeholder: R.image.book())
         titleLabel.text = bookWrapper.title
         authorLabel.text = bookWrapper.authors
         descriptionLabel.text = bookWrapper.description
+        
+        bookmarkContaineView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bookmarkTapped)))
+        bookmarkImageView.image = bookWrapper.isFavorite ? R.image.bookmark_fill() : R.image.bookmark_empty()
+    }
+}
+
+// MARK: - Private action
+private extension BookListTableViewCell {
+    @objc func bookmarkTapped() {
+        guard let bookWrapper = bookWrapper else { return }
+        delegate?.bookmarkDidClick(bookWrapper: bookWrapper)
     }
 }
 
