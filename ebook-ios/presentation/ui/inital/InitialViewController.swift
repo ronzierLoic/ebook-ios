@@ -56,8 +56,6 @@ private extension InitialViewController {
         searchBookButton.applyCornerRadius(withRadius: InitialViewControllerValues.BUTTON_CORNER_RADIUS)
         myLibraryButton.applyCornerRadius(withRadius: InitialViewControllerValues.BUTTON_CORNER_RADIUS)
         
-        bookImageVie.isHidden = !(view.frame.size.height - (myLibraryButton.frame.size.height + myLibraryButton.frame.origin.y) > InitialViewControllerValues.MINIMUM_SPACE_FOR_SHOW_IMAGE)
-        
         let lastSearchBook = viewModel.retrieveLastSearchBook()
         titleBookTextField.text = lastSearchBook?.title
         authorBookTextField.text = lastSearchBook?.author
